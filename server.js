@@ -24,10 +24,11 @@ const PORT=process.env.PORT||5500
 
 fastify.register(require('@fastify/express'))
   .after(() => {
-    fastify.use(express.urlencoded({extended: false})) // for Postman x-www-form-urlencoded
-    fastify.use(express.json())
+    // fastify.use(express.urlencoded({extended: false})) // for Postman x-www-form-urlencoded
+    // fastify.use(express.json())
 
     fastify.use(router)
+    // 7599571929
   })
 
 fastify.listen(PORT, console.log)
