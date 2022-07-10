@@ -14,7 +14,7 @@ router.get('/',(req,res)=>{
     
 })
 
-// PORT=process.env.PORT||5500
+const PORT=process.env.PORT||5500
 
 
 // app.listen(PORT,function(){
@@ -30,4 +30,4 @@ fastify.register(require('@fastify/express'))
     fastify.use(router)
   })
 
-fastify.listen(3030, console.log)
+fastify.listen(PORT, console.log)
