@@ -12,9 +12,9 @@ app.get('/',(req,res)=>{
     
 })
 
+PORT=process.env.PORT||5500
 
 
-
-app.listen("3030",function(){
-    console.log("server is running at port : 3030")
+app.listen(PORT,function(){
+    console.log(`server is running at port : ${PORT}`)
 })
